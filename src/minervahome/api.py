@@ -1,6 +1,10 @@
 from ninja import NinjaAPI, Schema
+from ninja_extra import NinjaExtraAPI
+from ninja_jwt.authentication import JWTAuth
+from ninja_jwt.controller import NinjaJWTDefaultController
 
-api = NinjaAPI()
+api = NinjaExtraAPI()
+api.register_controllers(NinjaJWTDefaultController)
 
 
 class UserSchema(Schema):
@@ -12,20 +16,11 @@ class UserSchema(Schema):
 
 @api.get("/test")
 def test(request):
-    """
-    This endpoint tests if the API is working correctly.
-
-    Parameters:
-    - request: The request object.
-
-    Returns:
-    - str: The string "test".
-    """
     print(request)
     return "test"
 
 
-@api.get("/user", response=UserSchema)
+@api.get("/user", response=UserSchema, auth=JWTAuth())
 def user(request):
     print(request)
     return request.user

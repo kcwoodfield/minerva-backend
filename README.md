@@ -29,5 +29,6 @@ cd src && python manage.py runserver 8001
 
 ## Project Resources
 
-- [Django Ninja](https://django-ninja.dev/)
+- [Django Ninja](https://django-ninja.dev/guides/authentication/) auth
+- [Django Extra](https://eadwincode.github.io/django-ninja-extra/) crypto package
 - [rav](https://github.com/jmitchel3/rav) see rav.yaml for config
