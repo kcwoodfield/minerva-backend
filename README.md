@@ -23,5 +23,5 @@ pip install django django-ninja
 Run server
 
 ```
-cd src && python manage.py runserver
+cd src && python manage.py runserver 8001
 ```

@@ -6,6 +6,8 @@ api = NinjaAPI()
 class UserSchema(Schema):
     username: str
     is_authenticated: bool
+    # is not request.user.is_authenticated
+    email: str = None
 
 
 @api.get("/test")
@@ -20,7 +22,7 @@ def test(request):
     - str: The string "test".
     """
     print(request)
-    return "testing"
+    return "test"
 
 
 @api.get("/user", response=UserSchema)
