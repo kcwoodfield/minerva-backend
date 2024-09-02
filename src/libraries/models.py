@@ -8,6 +8,7 @@ class LibraryEntry(models.Model):
     pages = models.IntegerField()
     rating = models.IntegerField()
     review = models.TextField()
+    isbn = models.CharField(max_length=100)
     completed = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now=True)
 
