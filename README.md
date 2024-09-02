@@ -1,6 +1,6 @@
 # Minerva Backend
 
-### Get Started
+## Get Started
 
 Create virtual environment
 
@@ -25,3 +25,9 @@ Run server
 ```
 cd src && python manage.py runserver 8001
 ```
+
+
+## Project Resources
+
+- [Django Ninja](https://django-ninja.dev/)
+- [rav](https://github.com/jmitchel3/rav) see rav.yaml for config
