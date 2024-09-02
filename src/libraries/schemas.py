@@ -21,3 +21,16 @@ class LibraryEntryDetailCreateSchema(Schema):
     isbn: str
     completed: bool
     timestamp: datetime
+
+
+class LibraryEntryListSchema(Schema):
+    # List -> Data
+    # LibraryEntryOut
+    title: str
+    author: str
+    pages: int
+    rating: int
+    review: str
+    isbn: str
+    completed: bool
+    timestamp: datetime
